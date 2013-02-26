@@ -9,7 +9,15 @@ import javax.crypto.Cipher;
 
 public class StandardAsymmetricEncryptor implements BytesAsymmetricEncryptor, TextAsymmetricEncryptor {
 
-	private String algorithm = "RSA";
+	private final String algorithm;
+	
+	public StandardAsymmetricEncryptor() {
+		this("RSA");
+	}
+	
+	public StandardAsymmetricEncryptor(String algorithm) {
+		this.algorithm = algorithm;
+	}
 	
 	@Override
 	public byte[] encrypt(byte[] data, Key key) {
