@@ -1,0 +1,739 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>Style Base</title>
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/mootools/1.4.5/mootools-yui-compressed.js"></script>
+		<script type="text/javascript" src="scrollspy.js"></script>
+		<script type="text/javascript" src="docs.js"></script>
+		<style type="text/css" media="screen,projection">
+			@import url("prototype.css");
+			@import url("base.css");
+			/* @import url("base-colors.css"); */
+		</style>
+		<!-- http://twitter.github.com/bootstrap/base-css.html#code -->
+	</head>
+	<body>
+		<section id="introduction" class="docs">
+			<header>
+				<h1>Introduction</h1>
+			</header>
+			
+		</section>
+		<section id="typography" class="docs">
+			<header>
+				<h1>Typography</h1>
+			</header>
+			<h1>Text</h1>
+			<p>Text inherits configuration from <code>body</code>. Default <code>font</code> is configured as <code>Verdana, "Geneva CE", lucida, sans-serif</code>. All heights are relative to the default <code>font-size</code> which should equal to <code>1em = 16px</code> and line height, which is also relative, should equal to <code>1.5em = 20px</code>.</p>
+			<p>In addition top and bottom <code>margin</code> of all paragraphs and block elements such as <code>h1</code>, <code>h2</code>, <code>h3</code>, <code>h4</code>, <code>h5</code>, <code>h6</code>, <code>blockquote</code>, <code>pre</code>, <code>address</code> and <code>table</code> is configured to <code>0.5em</code></p>
+			<section class="docs-example">
+				<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+				<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+				<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+			</section>
+			<h2>Links</h2>
+			<p>Use <code>&lt;a&gt;</code> to link your text to different pages.</p>
+			<section class="docs-example">
+				<a href="javascript:void(0)">My link</a>
+			</section>
+			<h2>Fine print</h2>
+			<p>Feel free to use <code>&lt;small&gt;</code> tag to fine print some text.</p>
+			<section class="docs-example">
+				<p>
+					<small>This line of text is supposed to be fine print.</small>
+				</p>
+			</section>
+			<h2>Important</h2>
+			<p><strong>Important</strong> text can be styled using <code>&lt;strong&gt;</code> or <abbr class="initialism">html5</abbr> <code>&lt;b&gt;</code> tag.</p>
+			<section class="docs-example">
+				<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+			</section>
+			<h2>Emphasis</h2>
+			<p>Text can be also <em>emphasized</em> using <code>&lt;em&gt;</code> or <abbr class="initialism">html5</abbr> <code>&lt;i&gt;</code> tag.</p>
+			<section class="docs-example">
+				<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+			</section>
+			<h2>Text classes</h2>
+			<p>In addition classes such as <code>text-annotation</code>, <code>text-muted</code>, <code>text-warning</code>, <code>text-error</code>, <code>text-info</code> and <code>text-success</code> can be used to style your text documents.</p>
+			<section class="docs-example">
+				<p class="text-annotation">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+				<p class="text-muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+				<p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+				<p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+				<p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+				<p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Tooltips</h1>
+			<p>A customized tooltip can be displayed by adding class <code>tooltip</code> to any element with <code>data-tooltip</code> attribute present. To display tooltip from the bottom add <code>tooltip-bottom</code> class to the element.</p>
+			<p>You can also turn tooltip off for separate element with class <code>tooltip-off</code>.</p>
+			<p class="text-warning"><strong>Custom tooltips are purely <abbr class="initialism">css3</abbr> based feature. If required, tooltips can be turned off by adding following piece of code to your stylesheet.</strong></p>
+			<pre class="docs-source">.tooltip[data-tooltip]:hover:before,
+.tooltip[data-tooltip]:hover:after {
+	display: none;
+}</pre>
+			<section class="docs-example">
+				<a href="javascript:void(0)" class="tooltip" data-tooltip="This is a custom looking tooltip">Top tooltip.</a>
+				<div class="tooltip tooltip-bottom" data-tooltip="This is a custom looking tooltip">Bottom tooltip.</div>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Headings</h1>
+			<p>All headings can be styled by using their tag name <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
+			<section class="docs-example">
+				<h1>h1. Heading 1</h1>
+				<h2>h2. Heading 2</h2>
+				<h3>h3. Heading 3</h3>
+				<h4>h4. Heading 4</h4>
+				<h5>h5. Heading 5</h5>
+				<h6>h6. Heading 6</h6>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Abbreviations</h1>
+			<p>Abbreviations are used to display shortened form of a word or phrase. All abbreviatons that contain <code>title</code> attribute will have <code>pointer</code> as cursor on mouse hover.</p>
+			<section class="docs-example">
+				<p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+			</section>
+			<h2>Initialism</h2>
+			<p>Some of the abbreviations need to be displayed in uppercase. This can be achieved by adding class <code>initialism</code> to the tag.</p>
+			<section class="docs-example">
+				<p>An abbreviation of the word attribute is <abbr title="eXtensible Markup Language" class="initialism">xml</abbr>.</p>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Addresses</h1>
+			<p>Present contact information for the nearest ancestor or the entire body of work using <code>&lt;address&gt;</code> tag.</p>
+			<p>Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
+			<section class="docs-example">
+				<address>
+					<strong>Twitter, Inc.</strong>
+					<br />
+					795 Folsom Ave, Suite 600<br />
+					San Francisco, CA 94107<br />
+					<abbr title="Phone">P:</abbr> (123) 456-7890
+				</address>
+				<address>
+					<strong>Full Name</strong>
+					<br />
+					<a href="javascript:void(0)">first.last@gmail.com</a>
+				</address>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Blockquote</h1>
+			<p>Used for quoting blocks of text from another author or source.</p>
+			<h2>Default blockquote</h2>
+			<p>Wrap any <abbr class="initialism">html</abbr> with <code>&lt;blockquote&gt;</code> tag for quote. <code>&lt;p&gt;</code> tag is recommended for simple quote.</p>
+			<section class="docs-example">
+				<blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+				</blockquote>
+			</section>
+			<h2>Blockquote options</h2>
+			<p>To display author or source of the quote use <code>&lt;cite&gt;</code> tag at the end of the quote.</p>
+			<section class="docs-example">
+				<blockquote>
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+					<cite>John Doe</cite>
+				</blockquote>
+			</section>
+			<h2>Right align</h2>
+			<p>Quotes can be also aligned to the right using <code>blockquote-right</code> class.</p>
+			<section class="docs-example">
+				<blockquote class="blockquote-right">
+					<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+					<cite>John Doe</cite>
+				</blockquote>
+			</section>
+		</section>
+		<section class="docs" id="lists">
+			<header><h1>Lists</h1></header>
+			<h1>Unordered list</h1>
+			<p>Use <code>&lt;ul&gt;</code> to display unordered list. No additional classes for different bullet points are available, so feel free to use your custom ones.</p>
+			<section class="docs-example">
+				<ul>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+					<li>Integer molestie lorem at massa</li>
+					<li>Facilisis in pretium nisl aliquet</li>
+					<li>Nulla volutpat aliquam velit
+						<ul>
+							<li>Phasellus iaculis neque</li>
+							<li>Purus sodales ultricies</li>
+							<li>Vestibulum laoreet porttitor sem</li>
+							<li>Ac tristique libero volutpat at</li>
+						</ul>
+					</li>
+					<li>Faucibus porta lacus fringilla vel</li>
+					<li>Aenean sit amet erat nunc</li>
+					<li>Eget porttitor lorem</li>
+				</ul>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Ordered list</h1>
+			<p>Use <code>&lt;ol&gt;</code> to display ordered list. No additional classes for different bullet points are available, so feel free to use your custom ones.</p>
+			<section class="docs-example">
+				<ol>
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+					<li>Integer molestie lorem at massa</li>
+					<li>Facilisis in pretium nisl aliquet</li>
+					<li>Nulla volutpat aliquam velit</li>
+					<li>Faucibus porta lacus fringilla vel</li>
+					<li>Aenean sit amet erat nunc</li>
+					<li>Eget porttitor lorem</li>
+				</ol>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Unstyled list</h1>
+			<p>Only additional class <code>list-unstyled</code> is available to remove bullet points from the list.</p>
+			<section class="docs-example">
+				<ul class="list-unstyled">
+					<li>Lorem ipsum dolor sit amet</li>
+					<li>Consectetur adipiscing elit</li>
+					<li>Integer molestie lorem at massa</li>
+					<li>Facilisis in pretium nisl aliquet</li>
+					<li>Nulla volutpat aliquam velit
+						<ul>
+							<li>Phasellus iaculis neque</li>
+							<li>Purus sodales ultricies</li>
+							<li>Vestibulum laoreet porttitor sem</li>
+							<li>Ac tristique libero volutpat at</li>
+						</ul>
+					</li>
+					<li>Faucibus porta lacus fringilla vel</li>
+					<li>Aenean sit amet erat nunc</li>
+					<li>Eget porttitor lorem</li>
+				</ul>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Description list</h1>
+			<p>A list of terms with their associated descriptions.</p>
+			<section class="docs-example">
+				<dl>
+					<dt>Description lists</dt>
+					<dd>A description list is perfect for defining terms.</dd>
+					<dt>Euismod</dt>
+					<dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+					<dd>Donec id elit non mi porta gravida at eget metus.</dd>
+					<dt>Malesuada porta</dt>
+					<dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+				</dl>
+			</section>
+		</section>
+		<section id="code" class="docs">
+			<header>
+				<h1>Code</h1>
+			</header>
+			<h1>Inline</h1>
+			<p>Use <code>&lt;code&gt;</code> tag to display inline portions of the code in the text.</p>
+			<section class="docs-example">
+				<p>For example, <code>&lt;section&gt;</code> should be wrapped as inline.</p>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Block</h1>
+			<p>A <code>&lt;pre&gt;</code> to display bigger portions of the code. In addition you can use <code>pre-scrollable</code> class to limit the visible height of the code.</p>
+			<section class="docs-example">
+				<pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+				<pre class="pre-scrollable">
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+&lt;p&gt;Sample text here...&lt;/p&gt;
+				</pre>
+			</section>
+		</section>
+		<section id="table" title="" class="docs">
+			<header>
+				<h1>Tables</h1>
+			</header>
+			<h1>Default table</h1>
+			<section class="docs-example">
+				<table>
+					<caption>Employee listing</caption>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Email</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="4">Default employee select <code>select * from employee</code></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>John</td>
+							<td>Doe</td>
+							<td><a href="javascript:void(0)">john.doe@example.com</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Tommy</td>
+							<td>Toe</td>
+							<td><a href="javascript:void(0)">tommy.toe@example.com</a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Marta</td>
+							<td>Moe</td>
+							<td><a href="javascript:void(0)">marta.moe@example.com</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<p>
+				Table with multiple row header and footer
+			</p>
+			<section class="docs-example">
+				<table>
+					<caption>Employee listing</caption>
+					<thead>
+						<tr>
+							<th rowspan="2">#</th>
+							<th colspan="3">Personal Information</th>
+						</tr>
+						<tr>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Email</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="4">Default employee select <code>select * from employee</code></td>
+						</tr>
+						<tr>
+							<td colspan="4">Showing <strong>3 of total 3</strong></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>John</td>
+							<td>Doe</td>
+							<td><a href="javascript:void(0)">john.doe@example.com</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Tommy</td>
+							<td>Toe</td>
+							<td><a href="javascript:void(0)">tommy.toe@example.com</a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Marta</td>
+							<td>Moe</td>
+							<td><a href="javascript:void(0)">marta.moe@example.com</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Zebra table</h1>
+			<p>You can create zebra table by adding <code>table-zebra</code> class to your table. A <abbr class="initialism">CSS3</abbr> selector <code>:nth-child(odd)</code> is used to decorate odd table body rows.</p>
+			<section class="docs-example">
+				<table class="table-zebra">
+					<caption>Employee listing</caption>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Email</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="4">Default employee select <code>select * from employee</code></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>John</td>
+							<td>Doe</td>
+							<td><a href="javascript:void(0)">john.doe@example.com</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Tommy</td>
+							<td>Toe</td>
+							<td><a href="javascript:void(0)">tommy.toe@example.com</a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Marta</td>
+							<td>Moe</td>
+							<td><a href="javascript:void(0)">marta.moe@example.com</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+			<hr class="docs-separator" />
+			<h1>Bordered table</h1>
+			<p>Bordered table can be created by adding <code>table-border</code> class to the table.</p>
+			<section class="docs-example">
+				<table class="table-border">
+					<caption>Employee listing</caption>
+					<thead>
+						<tr>
+							<th>#</th>
+							<th>First Name</th>
+							<th>Last Name</th>
+							<th>Email</th>
+						</tr>
+					</thead>
+					<tfoot>
+						<tr>
+							<td colspan="4">Default employee select <code>select * from employee</code></td>
+						</tr>
+					</tfoot>
+					<tbody>
+						<tr>
+							<td>1</td>
+							<td>John</td>
+							<td>Doe</td>
+							<td><a href="javascript:void(0)">john.doe@example.com</a></td>
+						</tr>
+						<tr>
+							<td>2</td>
+							<td>Tommy</td>
+							<td>Toe</td>
+							<td><a href="javascript:void(0)">tommy.toe@example.com</a></td>
+						</tr>
+						<tr>
+							<td>3</td>
+							<td>Marta</td>
+							<td>Moe</td>
+							<td><a href="javascript:void(0)">marta.moe@example.com</a></td>
+						</tr>
+					</tbody>
+				</table>
+			</section>
+		</section>
+		<section class="docs">
+			<header>
+				<h1>Forms</h1>
+			</header>
+			<h1>Form</h1>
+			<section class="docs-example">
+					<form>
+						<fieldset>
+							<legend>Legend</legend>
+								<div class="field-row">
+									<label class="field-label">First name</label>
+									<div class="field-controls">
+										<input type="text" placeholder="Type something…">
+									</div>
+								</div>
+						</fieldset>
+						<div class="field-row field-required">
+							<label class="field-label field-checkbox">
+								<input type="checkbox"> Check me out
+							</label>
+						</div>
+						<button type="submit" class="btn">Submit</button>
+					</form>
+			</section>
+			<h2>Optional layouts</h2>
+			<p>Form can be also aranged in optional layouts.</p>
+			<hr class="docs-separator" />
+			<h1>Form fields</h1>
+			<hr class="docs-separator" />
+			<h1>Form field groups</h1>
+			<hr class="docs-separator" />
+			<h1>Form controls</h1>
+		</section>
+		<section class="docs">
+			<header>
+				<h1>Buttons</h1>
+			</header>
+			<h1>Default buttons</h1>
+			<p>Button styles can be applied with <code>btn</code> class to almost aby element. But you would want to apply them to <code>&lt;a&gt;</code> or <code>&lt;button&gt;</code> elements for best view.</p>
+			<table class="table-border">
+				<colgroup>
+					<col style="width: 15%">
+					<col style="width: 15%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Button</th>
+						<th>Class</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="btn">Button</a></td>
+						<td><code>.btn</code></td>
+						<td>The default button design.</td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-primary">Primary</a></td>
+						<td><code>.btn-primary</code></td>
+						<td>Primary button desing. Should denote the biggest importance of the button action.</td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-success">Success</a></td>
+						<td><code>.btn-success</code></td>
+						<td>Success button should mean positive button action in response to the user.</td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-danger">Danger</a></td>
+						<td><code>.btn-danger</code></td>
+						<td>Means danger action in the response to the user. User should take the biggest care when performing given action.</td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-link">Link</a></td>
+						<td><code>.btn-link</code></td>
+						<td>Use this design if you need to display button as a link. Keep in mind you should style this type in the same manner as you style your links.</td>
+					</tr>
+				</tbody>
+			</table>
+			<hr class="docs-separator">
+			<h1>Button sizes</h1>
+			<p>Buttons can be also styled in three additional sizes in addition to the default one.</p>
+			<table class="table-border">
+				<colgroup>
+					<col style="width: 15%">
+					<col style="width: 15%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Button</th>
+						<th>Class</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="btn btn-mini">Mini button</a></td>
+						<td><code>.btn-mini</code></td>
+						<td>The smallest button size.</td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-small">Small button</a></td>
+						<td><code>.btn-small</code></td>
+						<td>Small button size.</td>
+					</tr>
+					<tr>
+						<td><a class="btn">Default button</a></td>
+						<td>N/A</td>
+						<td>Default button size.</td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-large">Large button</a></td>
+						<td><code>.btn-large</code></td>
+						<td>Largest button size.</td>
+					</tr>
+				</tbody>
+			</table>
+			<hr class="docs-separator">
+			<h1>Button states</h1>
+			<h2>Disabled state</h2>
+			<table class="table-border">
+				<colgroup>
+					<col style="width: 15%">
+					<col style="width: 20%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Button</th>
+						<th>Class</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="btn btn-disabled">Button</a></td>
+						<td><code>.btn .btn-disabled</code></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-primary btn-disabled">Primary</a></td>
+						<td><code>.btn-primary .btn-disabled</code></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-success btn-disabled">Success</a></td>
+						<td><code>.btn-success .btn-disabled</code></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-danger btn-disabled">Danger</a></td>
+						<td><code>.btn-danger .btn-disabled</code></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-link btn-disabled">Link</a></td>
+						<td><code>.btn-link .btn-disabled</code></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<h2>Active state</h2>
+			<table class="table-border">
+				<colgroup>
+					<col style="width: 15%">
+					<col style="width: 20%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Button</th>
+						<th>Class</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td><a class="btn btn-active">Button</a></td>
+						<td><code>.btn .btn-active</code></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-primary btn-active">Primary</a></td>
+						<td><code>.btn-primary .btn-active</code></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-success btn-active">Success</a></td>
+						<td><code>.btn-success .btn-active</code></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-danger btn-active">Danger</a></td>
+						<td><code>.btn-danger .btn-active</code></td>
+						<td></td>
+					</tr>
+					<tr>
+						<td><a class="btn btn-link btn-active">Link</a></td>
+						<td><code>.btn-link .btn-active</code></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+			<hr class="docs-separator">
+			<h1>Button groups</h1>
+			<p>You can group multiple buttons together by wrapping them in element with class <code>btn-group</code>. You should beware of extra spaces or newlines between the buttons as they will be displayed and cannot be removed with css.</p>
+ 			<section class="docs-example">
+ 				<div class="btn-group">
+ 					<a href="javascript:void(0)" class="btn">Button 1</a><a href="javascript:void(0)" class="btn">Button 2</a><a href="javascript:void(0)" class="btn">Button 3</a><a href="javascript:void(0)" class="btn">Button 4</a>
+ 				</div>
+ 			</section>
+ 			<p>Wrapping multiple button groups in element with class <code>btn-controls</code> will result displaying groups in toolbar-like style.</p>
+ 			<section class="docs-example">
+ 				<div class="btn-controls">
+ 					<div class="btn-group">
+						<a href="javascript:void(0)" class="btn">Button 1</a><a href="javascript:void(0)" class="btn">Button 2</a><a href="javascript:void(0)" class="btn">Button 3</a><a href="javascript:void(0)" class="btn">Button 4</a>
+					</div>
+					<div class="btn-group">
+						<a href="javascript:void(0)" class="btn">Button 1</a><a href="javascript:void(0)" class="btn">Button 2</a><a href="javascript:void(0)" class="btn">Button 3</a>
+					</div>
+					<div class="btn-group">
+						<a href="javascript:void(0)" class="btn">Button 1</a><a href="javascript:void(0)" class="btn">Button 2</a>
+					</div>
+					<div class="btn-group">
+						<a href="javascript:void(0)" class="btn">Button 1</a><a href="javascript:void(0)" class="btn">Button 2</a><a href="javascript:void(0)" class="btn">Button 3</a><a href="javascript:void(0)" class="btn">Button 4</a>
+					</div>
+					<div class="btn-group">
+						<a href="javascript:void(0)" class="btn">Button 1</a>
+					</div>
+ 				</div>
+ 			</section>
+		</section>
+		<section class="docs">
+			<header>
+				<h1>Sections</h1>
+			</header>
+			<h1>Default section</h1>
+			<p>A default section can be displayed by adding <code>section</code> to the <code>&lt;div&gt;</code> tag.</p>
+			<section class="docs-example">
+				<div class="section">
+					<h3>Section header</h3>
+					<p>Donec faucibus nibh eu tortor vestibulum et varius metus posuere. Etiam at dui sollicitudin lectus viverra bibendum at sit amet nunc. Phasellus eget risus risus, nec pellentesque purus. Quisque aliquet iaculis quam. Phasellus non libero ac lectus porta molestie eget id erat. Nulla non nunc enim, a aliquet urna.</p>
+				</div>
+			</section>
+			<h1>Warning section</h1>
+			<section class="docs-example">
+				<div class="section section-warning">
+					<p>Your password will expire in 1 week.</p>
+				</div>
+			</section>
+			<h1>Error section</h1>
+			<section class="docs-example">
+				<div class="section section-error">
+					<p>Credentials you entered cannot be verified with any account.</p>
+				</div>
+				<div class="section section-error">
+					<h3>Please, correct following errors:</h3>
+					<ul>
+						<li>email address is invalid</li>
+						<li>please select your gender</li>
+					</ul>
+				</div>
+			</section>
+			<h1>Information section</h1>
+			<section class="docs-example">
+				<div class="section section-info">
+					<p>Password <strong>must</strong> contain <em>at least 8 characters, from whitch at least one in in lowercase, one in uppercase and one is a number</em>.</p>
+				</div>
+			</section>
+			<h1>Success section</h1>
+			<section class="docs-example">
+				<div class="section section-success">
+					<p><strong>Well done!</strong> You successfully read this important success message.</p>
+				</div>
+			</section>
+		</section>
+		<section class="docs">
+			<header><h1>Miscellaneous</h1></header>
+			<h1>States</h1>
+			<table class="table-border">
+				<colgroup>
+					<col style="width: 15%">
+					<col style="width: 15%">
+					<col>
+				</colgroup>
+				<thead>
+					<tr>
+						<th>State</th>
+						<th>Class</th>
+						<th>Description</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Active</th>
+						<td><code>active</code></td>
+						<td></td>
+					</tr>
+					<tr>
+						<th>Disabled</th>
+						<td><code>disabled</code></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		</section>
+	</body>
+</html>
